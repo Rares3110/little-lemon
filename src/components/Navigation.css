@@ -1,0 +1,30 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 0px;
+    padding: 20px 0px 20px 0px;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+    list-style-type: none;
+    column-gap: 20px;
+    padding: 0px 20px 0px 20px;
+}
+
+nav > ul > li > a {
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+    color: #F4CE14;
+}

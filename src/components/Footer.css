@@ -1,0 +1,45 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+    justify-content: space-around;
+    background-color: #495E57;
+    padding: 50px 20px 50px 20px;
+}
+
+footer > img {
+    width: 80px;
+    filter: brightness(2000%);
+}
+
+.link-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.link-list > h4 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 0px 30px 0px;
+}
+
+.link-list > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    list-style-type: none;
+}
+
+.link-list > ul > li > a {
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.link-list > ul > li > a:hover {
+    color: #F4CE14;
+}

@@ -1,57 +1,58 @@
 import logo from '../assets/Logo_Footer.png'
+import './Footer.css'
 
 const Footer = () => {
     return (
         <footer>
             <img src={logo}/>
-            <section>
-                <h2>Doormat Navigation</h2>
+            <section className='link-list'>
+                <h4>Doormat Navigation</h4>
                 <ul>
                     <li>
-                        <a>Home</a>
+                        <a href="">Home</a>
                     </li>
                     <li>
-                        <a>About</a>
+                        <a href="">About</a>
                     </li>
                     <li>
-                        <a>Menu</a>
+                        <a href="">Menu</a>
                     </li>
                     <li>
-                        <a>Reservations</a>
+                        <a href="">Reservations</a>
                     </li>
                     <li>
-                        <a>Order Online</a>
+                        <a href="">Order Online</a>
                     </li>
                     <li>
-                        <a>Login</a>
+                        <a href="">Login</a>
                     </li>
                 </ul>
             </section>
-            <section>
-                <h2>Contact</h2>
+            <section className='link-list'>
+                <h4>Contact</h4>
                 <ul>
                     <li>
-                        <a>Adress</a>
+                        <a href="">Adress</a>
                     </li>
                     <li>
-                        <a>Phone Number</a>
+                        <a href="">Phone Number</a>
                     </li>
                     <li>
-                        <a>Email</a>
+                        <a href="">Email</a>
                     </li>
                 </ul>
             </section>
-            <section>
-                <h2>Social Media Links</h2>
+            <section className='link-list'>
+                <h4>Social Media Links</h4>
                 <ul>
                     <li>
-                        <a>Instagram</a>
+                        <a href="">Instagram</a>
                     </li>
                     <li>
-                        <a>Facebook</a>
+                        <a href="">Facebook</a>
                     </li>
                     <li>
-                        <a>Twitter</a>
+                        <a href="">Twitter</a>
                     </li>
                 </ul>
             </section>
