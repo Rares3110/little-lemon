@@ -1,7 +1,11 @@
 import logo from '../assets/Logo.svg'
 import './Navigation.css'
+import { useNavigate } from 'react-router-dom'
 
 const Navigation = () => {
+
+    const navigate = useNavigate();
+
     return (
         <nav>
             <ul>
@@ -9,22 +13,22 @@ const Navigation = () => {
                     <img src={logo}/>
                 </li>
                 <li>
-                    <a href="">Home</a>
+                    <a onClick={() => navigate('/')}>Home</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a onClick={() => navigate('/')}>About</a>
                 </li>
                 <li>
-                    <a href="">Menu</a>
+                    <a onClick={() => navigate('/')}>Menu</a>
                 </li>
                 <li>
-                    <a href="">Reservations</a>
+                    <a onClick={() => navigate('/booking')}>Reservations</a>
                 </li>
                 <li>
-                    <a href="">Order Online</a>
+                    <a onClick={() => navigate('/')}>Order Online</a>
                 </li>
                 <li>
-                    <a href="">Login</a>
+                    <a onClick={() => navigate('/')}>Login</a>
                 </li>
             </ul>
         </nav>

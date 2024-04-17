@@ -1,7 +1,10 @@
 import logo from '../assets/Logo_Footer.png'
 import './Footer.css'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+    const navigate = useNavigate();
+
     return (
         <footer>
             <img src={logo}/>
@@ -9,22 +12,22 @@ const Footer = () => {
                 <h4>Doormat Navigation</h4>
                 <ul>
                     <li>
-                        <a href="">Home</a>
+                        <a onClick={() => navigate('/')}>Home</a>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <a onClick={() => navigate('/')}>About</a>
                     </li>
                     <li>
-                        <a href="">Menu</a>
+                        <a onClick={() => navigate('/')}>Menu</a>
                     </li>
                     <li>
-                        <a href="">Reservations</a>
+                        <a onClick={() => navigate('/booking')}>Reservations</a>
                     </li>
                     <li>
-                        <a href="">Order Online</a>
+                        <a onClick={() => navigate('/')}>Order Online</a>
                     </li>
                     <li>
-                        <a href="">Login</a>
+                        <a onClick={() => navigate('/')}>Login</a>
                     </li>
                 </ul>
             </section>
@@ -32,13 +35,13 @@ const Footer = () => {
                 <h4>Contact</h4>
                 <ul>
                     <li>
-                        <a href="">Adress</a>
+                        <a onClick={() => navigate('/')}>Adress</a>
                     </li>
                     <li>
-                        <a href="">Phone Number</a>
+                        <a onClick={() => navigate('/')}>Phone Number</a>
                     </li>
                     <li>
-                        <a href="">Email</a>
+                        <a onClick={() => navigate('/')}>Email</a>
                     </li>
                 </ul>
             </section>
@@ -46,13 +49,13 @@ const Footer = () => {
                 <h4>Social Media Links</h4>
                 <ul>
                     <li>
-                        <a href="">Instagram</a>
+                        <a onClick={() => navigate('/')}>Instagram</a>
                     </li>
                     <li>
-                        <a href="">Facebook</a>
+                        <a onClick={() => navigate('/')}>Facebook</a>
                     </li>
                     <li>
-                        <a href="">Twitter</a>
+                        <a onClick={() => navigate('/')}>Twitter</a>
                     </li>
                 </ul>
             </section>
