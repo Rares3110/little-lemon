@@ -31,3 +31,57 @@ main {
 .black-text {
     color: black;
 }
+
+/*section 3*/
+.informative-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    column-gap: 50px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    margin: 50px 40px 120px 40px;
+}
+
+.restaurant-article {
+    width: 300px;
+    margin-top: -30px;
+}
+
+.restaurant-article > h2 {
+    color: #333333;
+}
+
+.restaurant-article > p {
+    color: black;
+    font-weight: 550;
+    font-size: 18px;
+    margin-top: 25px;
+    text-align: justify;
+}
+
+.presentation {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.presentation img:first-child {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.presentation img:last-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+}

@@ -3,6 +3,8 @@ import SaladImage from '../../assets/Greek_Salad.jpg'
 import BruschettaImage from '../../assets/bruschetta.svg'
 import LemonDesertImage from '../../assets/Lemon_Dessert.jpg'
 import FoodItemCard from './FootItemCard'
+import InformativeUp from '../../assets/Informative-Up.jpg'
+import InformativeDown from '../../assets/Informative-Down.jpg'
 
 const foodItems = [
     {
@@ -52,7 +54,23 @@ const HomeMain = () => {
             </section>
             <section>
             </section>
-            <section>
+            <section className="informative-section">
+                <article className="restaurant-article">
+                    <h1>Little Lemon</h1>
+                    <h2>Chicago</h2>
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                        Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
+                        sunt nostrud amet.
+                        <br/>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                        do amet sint. Velit officia consequat duis enim velit mollit.
+                    </p>
+                </article>
+                <div className='presentation'>
+                    <img src={InformativeUp}/>
+                    <img src={InformativeDown}/>
+                </div>
             </section>
         </main>
     )

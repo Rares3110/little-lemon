@@ -1,10 +1,15 @@
 import logo from '../assets/Logo.svg'
 import './Navigation.css'
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Navigation = () => {
+const Navigation = props => {
 
     const navigate = useNavigate();
+    const borderBottomWidth = "3px";
+    useEffect(
+        () => console.log(props.active), [props]
+    )
 
     return (
         <nav>
@@ -13,7 +18,7 @@ const Navigation = () => {
                     <img src={logo}/>
                 </li>
                 <li>
-                    <a onClick={() => navigate('/')}>Home</a>
+                    <a style={{borderBottomWidth: props.active === 'home' ? borderBottomWidth : '0px'}} onClick={() => navigate('/')}>Home</a>
                 </li>
                 <li>
                     <a onClick={() => navigate('/')}>About</a>
@@ -22,7 +27,7 @@ const Navigation = () => {
                     <a onClick={() => navigate('/')}>Menu</a>
                 </li>
                 <li>
-                    <a onClick={() => navigate('/booking')}>Reservations</a>
+                    <a style={{borderBottomWidth: props.active === 'reservations' ? borderBottomWidth : '0px'}} onClick={() => navigate('/booking')}>Reservations</a>
                 </li>
                 <li>
                     <a onClick={() => navigate('/')}>Order Online</a>

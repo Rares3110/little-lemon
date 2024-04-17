@@ -6,7 +6,7 @@ import BookingMain from "../components/BookingPage/BookingMain";
 const BookingPage = () => {
     return (
         <>
-            <Navigation/>
+            <Navigation active='reservations'/>
             <BookingHeader/>
             <BookingMain/>
             <Footer/>
