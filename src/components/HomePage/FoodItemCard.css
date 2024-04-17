@@ -1,0 +1,61 @@
+.card {
+    width: 260px;
+    height: 450px;
+    background-color: #EDEFEE;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.card > img {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card > section {
+    position: relative;
+    height: 200px;
+    padding: 10px;
+}
+
+.card > section > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card > section > div > h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card > section > div > span {
+    font-weight: bold;
+    color: #EE9972;
+}
+
+.card > section > p {
+    color: rgba(0, 0, 0, 0.75);
+    margin-top: 15px;
+}
+
+.order-button {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    background-color: #EDEFEE;
+}
+
+.order-button > * {
+    width: 25px;
+    height: 25px;
+}
