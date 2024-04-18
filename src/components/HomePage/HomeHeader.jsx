@@ -7,7 +7,7 @@ const HomeHeader = () => {
 
     return (
         <header>
-            <div class="bg-green-decoration"/>
+            <div className="bg-green-decoration"/>
             <section>
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>

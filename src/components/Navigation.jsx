@@ -7,9 +7,6 @@ const Navigation = props => {
 
     const navigate = useNavigate();
     const borderBottomWidth = "3px";
-    useEffect(
-        () => console.log(props.active), [props]
-    )
 
     return (
         <nav>

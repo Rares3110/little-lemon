@@ -5,6 +5,11 @@ import LemonDesertImage from '../../assets/Lemon_Dessert.jpg'
 import FoodItemCard from './FootItemCard'
 import InformativeUp from '../../assets/Informative-Up.jpg'
 import InformativeDown from '../../assets/Informative-Down.jpg'
+import Profile1 from '../../assets/profile_1.jpg'
+import Profile2 from '../../assets/profile_2.jpg'
+import Profile3 from '../../assets/profile_3.jpg'
+import Profile4 from '../../assets/profile_4.jpg'
+import ReviewCard from './ReviewCard'
 
 const foodItems = [
     {
@@ -38,6 +43,33 @@ const foodItems = [
     }
 ]
 
+const reviewers = [
+    {
+        rating: 4.5,
+        name: 'Emily',
+        profile: Profile1,
+        review: 'Loved Little Lemon! Amazing flavors, cozy atmosphere, and friendly staff. Will be back!'
+    },
+    {
+        rating: 4.8,
+        name: 'Alexander',
+        profile: Profile2,
+        review: 'Hidden gem! Authentic food, great ambiance, highly recommend.'
+    },
+    {
+        rating: 4.5,
+        name: 'Sophia',
+        profile: Profile3,
+        review: 'Little Lemon exceeded expectations! Delicious food and inviting ambiance.'
+    },
+    {
+        rating: 4.9,
+        name: 'Jasmine',
+        profile: Profile4,
+        review: 'Must-visit! Fantastic Mediterranean cuisine and exceptional service.'
+    }
+]
+
 const HomeMain = () => {
     return (
         <main>
@@ -52,19 +84,28 @@ const HomeMain = () => {
                     }
                 </ul>
             </section>
-            <section>
+            <section className="review-section">
+                <h2>Testimonials</h2>
+                <ul className="reviews-list">
+                    {
+                        reviewers.map(reviewer => <ReviewCard key={reviewer.name} {...reviewer}/>)
+                    }
+                </ul>
             </section>
             <section className="informative-section">
                 <article className="restaurant-article">
                     <h1>Little Lemon</h1>
                     <h2>Chicago</h2>
                     <p>
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                        Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
-                        sunt nostrud amet.
+                        Welcome to Little Lemon, a cozy restaurant tucked away in the heart
+                        of the city, offering a delicious taste of the Mediterranean. Stepping
+                        inside, you're greeted by a warm and inviting atmosphere, with soft
+                        lighting and Mediterranean-inspired décor creating a relaxed ambiance.
                         <br/>
-                        Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                        do amet sint. Velit officia consequat duis enim velit mollit.
+                        <br/>
+                        Our open kitchen buzzes with activity as skilled chefs prepare an array
+                        of mouthwatering dishes using fresh, locally sourced ingredients and
+                        time-honored recipes.
                     </p>
                 </article>
                 <div className='presentation'>

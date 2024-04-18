@@ -1,0 +1,13 @@
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px 100px 0px;
+}
+
+.booking-form label {
+    margin-top: 20px;
+}
+
+.booking-form input[type="submit"] {
+    margin-top: 30px;
+}
