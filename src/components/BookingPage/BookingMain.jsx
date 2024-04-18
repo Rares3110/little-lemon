@@ -2,7 +2,7 @@ import './BookingMain.css'
 import BookingForm from './BookingForm'
 import { useState } from 'react'
 
-const availableTimes = [
+export const availableTimes = [
     '17:00',
     '18:00',
     '19:00',
@@ -11,7 +11,7 @@ const availableTimes = [
     '22:00'
 ]
 
-const defaultInfo = {
+export const defaultInfo = {
     date: getDate(),
     time: availableTimes[0],
     guests: null,
@@ -36,4 +36,4 @@ const BookingMain = () => {
     )
 }
 
-export default BookingMain
+export default BookingMain;
