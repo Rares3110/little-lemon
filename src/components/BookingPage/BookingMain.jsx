@@ -2,8 +2,6 @@ import './BookingMain.css'
 import BookingForm from './BookingForm'
 import { useEffect, useState } from 'react'
 
-
-
 const getDate = () => {
     const today = new Date();
     const month = today.getMonth() + 1;
@@ -38,8 +36,8 @@ export const getAvailableTimes = (dateString) => {
 export const defaultInfo = {
     date: getDate(),
     time: getAvailableTimes(getDate())[0],
-    guests: null,
-    occasion: 'Birthday'
+    guests: '',
+    occasion: 'None'
 }
 
 const BookingMain = () => {

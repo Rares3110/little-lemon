@@ -2,12 +2,50 @@
     display: flex;
     flex-direction: column;
     margin: 40px 0px 100px 0px;
+    width: 250px;
 }
 
 .booking-form label {
-    margin-top: 20px;
+    margin: 20px 0px 4px 0px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .booking-form input[type="submit"] {
     margin-top: 30px;
+    background-color: #F4CE14;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 16px;
+    padding: 8px 15px 8px 15px;
+    border: 0px;
+    cursor: pointer;
+    border: 2px solid #333333;
+}
+
+.booking-form input[type="submit"]:hover {
+    background-color: #333333;
+    color: #F4CE14;
+}
+
+.booking-form input[type="submit"]:disabled {
+    filter: brightness(50%);
+}
+
+.booking-form input[type="submit"]:disabled:hover {
+    background-color: #F4CE14;
+    color: black;
+}
+
+.booking-form input, select {
+    border: 2px solid #333333;
+    padding: 6px 10px 6px 10px;
+    border-radius: 8px;
+}
+
+.validation-span {
+    color: red;
+    font-size: 16px;
+    height: 4px;
 }
