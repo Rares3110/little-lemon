@@ -1,24 +1,10 @@
 import './BookingMain.css'
 import BookingForm from './BookingForm'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-export const availableTimes = [
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00'
-]
 
-export const defaultInfo = {
-    date: getDate(),
-    time: availableTimes[0],
-    guests: null,
-    occasion: 'Birthday'
-}
 
-function getDate() {
+const getDate = () => {
     const today = new Date();
     const month = today.getMonth() + 1;
     const year = today.getFullYear();
@@ -26,8 +12,54 @@ function getDate() {
     return `${year}-${month < 10 ? '0' : ''}${month}-${date < 10 ? '0' : ''}${date}`;
 }
 
+export const getAvailableTimes = (dateString) => {
+    let date = new Date(dateString);
+
+    if(date.getDay() === 0 || date.getDay() === 6) {
+        return [
+            '17:00',
+            '18:00',
+            '19:00',
+            '20:00',
+            '21:00',
+            '22:00',
+            '23:00'
+        ]
+    }
+    else {
+        return [
+            '19:00',
+            '20:00',
+            '21:00'
+        ]
+    }
+}
+
+export const defaultInfo = {
+    date: getDate(),
+    time: getAvailableTimes(getDate())[0],
+    guests: null,
+    occasion: 'Birthday'
+}
+
 const BookingMain = () => {
     const [info, setInfo] = useState(defaultInfo);
+    const [availableTimes, setAvailableTimes] = useState(getAvailableTimes(defaultInfo.date));
+
+    useEffect(() => {
+        let newTimes = getAvailableTimes(info.date);
+
+        setAvailableTimes(newTimes)
+
+        if(!newTimes.includes(info.time)) {
+            setInfo(lastValue => {
+                return {
+                    ...lastValue,
+                    time: newTimes[0]
+                }
+            })
+        }
+    }, [info.date])
 
     return (
         <main>

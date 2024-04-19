@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import './BookingForm.css'
 
 const BookingForm = (props) => {
+    const navigate = useNavigate();
+
     return (
         <form className="booking-form">
                 <label htmlFor="res-date">Choose date</label>
@@ -18,7 +21,7 @@ const BookingForm = (props) => {
                         time: event.target.value
                     }})}>
                     {
-                        props.availableTimes.map(time => <option value={time}>{time}</option>)
+                        props.availableTimes.map(time => <option key={time} value={time}>{time}</option>)
                     }
                 </select>
                 <label htmlFor="guests">Number of guests</label>
@@ -38,7 +41,7 @@ const BookingForm = (props) => {
                     <option value="Birthday">Birthday</option>
                     <option value="Anniversary">Anniversary</option>
                 </select>
-                <input type="submit" value="Make Your reservation" />
+                <input type="submit" onClick={() => navigate('/booking/confirmation')} value="Make Your reservation" />
             </form>
     )
 }
